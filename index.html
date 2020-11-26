@@ -19,51 +19,50 @@
                 </li>
             </ul>
         </nav>
-            <!-- Register--> 
-        <div class="container" id="register-page">
-            <h2> Register </h2> 
-            <form class= "was-valiated" id="register-form">
-                <div class="form-group">
-                    <label for="email"> Email </label>
-                    <input type="email" id="email-regis" class="form-control" placeholder="Enter Email" name="email" required>
-                    <div class="valid-feedback"> Valid </div>
-                    <div class="invalid-feedback"> Please fill out this field</div>
-                </div>
-                <div class="form-group">
-                    <label for="password"> Password</label>
-                    <input type="password" id="password-regis" class="form-control" placeholder="Enter password" name="password" required > 
-                    <div class="valid-feedback"> Valid </div>
-                    <div class="invalid-feedback"> Please fill out this field</div>
-                </div>
-                <button id="regis-submit" class="btn btn-primary"> Submit</button>
-            </form>
-        </div>
-        <!-- Login--> 
-        <div class="container" id="login-page">
-            <h2> Login </h2> 
-            <form class= "was-validated" id="login-form">
-                <div class='form-group'>
-                    <label for="email"> Email </label>
-                    <input type="email" id="email-login" class="form-control" placeholder="Enter Email" name="email" required>
-                    <div class="valid-feedback"> Valid </div>
-                    <div class="invalid-feedback"> Please fill out this field</div>
-                </div>
-                <div class="form-group">
-                    <label for="password"> Password</label>
-                    <input type="password" id="password-login" class="form-control" placeholder="Enter password" name="password" required > 
-                    <div class="valid-feedback"> Valid </div>
-                    <div class="invalid-feedback"> Please fill out this field</div>
-                </div>
-                <button id="login-submit" class="btn btn-primary"> Submit</button>
-                <button id="register" class="btn btn-success" onclick="registerPage()"> I havent acount</button>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-            </form>
-        </div>
-        
+    </div>
+        <!-- Register--> 
+    <div class="container" id="register-page">
+        <h2> Register </h2> 
+        <form class= "was-valiated" id="register-form">
+            <div class="form-group">
+                <label for="email"> Email </label>
+                <input type="email" id="email-regis" class="form-control" placeholder="Enter Email" name="email" required>
+                <div class="valid-feedback"> Valid </div>
+                <div class="invalid-feedback"> Please fill out this field</div>
+            </div>
+            <div class="form-group">
+                <label for="password"> Password</label>
+                <input type="password" id="password-regis" class="form-control" placeholder="Enter password" name="password" required > 
+                <div class="valid-feedback"> Valid </div>
+                <div class="invalid-feedback"> Please fill out this field</div>
+            </div>
+            <button id="regis-submit" class="btn btn-primary"> Submit</button>
+        </form>
+    </div>
+    <!-- Login--> 
+    <div class="container" id="login-page">
+        <h2> Login </h2> 
+        <form class= "was-validated" id="login-form">
+            <div class='form-group'>
+                <label for="email"> Email </label>
+                <input type="email" id="email-login" class="form-control" placeholder="Enter Email" name="email" required>
+                <div class="valid-feedback"> Valid </div>
+                <div class="invalid-feedback"> Please fill out this field</div>
+            </div>
+            <div class="form-group">
+                <label for="password"> Password</label>
+                <input type="password" id="password-login" class="form-control" placeholder="Enter password" name="password" required > 
+                <div class="valid-feedback"> Valid </div>
+                <div class="invalid-feedback"> Please fill out this field</div>
+            </div>
+            <button id="login-submit" class="btn btn-primary"> Submit</button>
+            <button id="register" class="btn btn-success" onclick="registerPage()"> I havent acount</button>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </form>
     </div>
     
     <!-- this script is needed to track lyric -->
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+    <script src="./assets/index.js"></script>
 </body>
 </html>
