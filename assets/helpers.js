@@ -80,6 +80,20 @@ function getInsult(){
             console.log(xhr)
         })
 }
+
+function songsByArtist(artistName, dataLength, pageNumber){
+    $.ajax({
+        url: host + `/music-match/search/${artistName}/${dataLength}/${pageNumber}`,
+        method: 'GET',
+    })
+        .done(response => {
+            console.log(response)
+            
+        })
+        .fail(xhr => {
+            console.log(xhr)
+        })
+} 
 function register(){
     const email = $("#email-regis").val
     const password = $("#password-regis").val()

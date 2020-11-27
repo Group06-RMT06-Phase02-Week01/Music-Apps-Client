@@ -10,5 +10,5 @@ $(document).ready(() => {
         showLoginPage()
     }
 
-    getInsult()
+    songsByArtist('isyana', 3, 1)
 })
