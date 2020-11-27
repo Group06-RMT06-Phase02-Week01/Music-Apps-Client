@@ -8,6 +8,7 @@ function onSignIn(googleUser) {
         data: { googleToken }
     })
     .done(response => {
+        localStorage.setItem('access_token', response.access_token)
         console.log(response)
     })
     .fail(xhr => {
@@ -54,6 +55,73 @@ function getRandomQuote(){
     })
     .done(response => {
         console.log(response)
+    })
+    .fail(xhr => {
+        console.log(xhr)
+    })
+}
+function login(){
+    const email = $("#email-login").val()
+        const password = $("#password-login").val()
+        $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/login",
+            data: {
+                email,
+                password
+            }
+        })
+        .done(response => {
+            console.log(response)
+            localStorage.setItem('access_token', response.access_token)
+            showMainPage( )
+        })
+        .fail((xhr, textStatus) => {
+            console.log(textStatus)
+        })
+}
+function register(){
+    const email = $("#email-regis").val
+    const password = $("#password-regis").val()
+        $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/register",
+            data: {
+                email,
+                password
+            }
+        })
+        .done(response => {
+            console.log(response)
+            showLoginPage()
+        })
+        .fail((xhr, textStatus) => {
+            console.log(textStatus)
+        })
+}
+function fetchMusic(){
+    // $("#list-music").empty()
+    $.ajax({
+        method: "GET",
+        url:  `${server}/todos`,
+        headers: {
+            access_token: localStorage.getItem("access_token")
+        }
+    })
+    .done(response => {
+        response.forEach(element => {
+            // console.log(element.id)  
+            $("#list-music").append(` 
+            <div class="card bg-ligth mb=10 pd=10" id="music-list">
+                <div class="card-deck m">
+                    <div class="card-body text-center">
+                        <p class="card-text">${element.title}</p>
+                        <p class="card-text">${element.description}</p>
+                        <p class="card-text text-muted"> ${element.due_date.substr(0, 10)}</p>
+                    </div>
+                </div>
+            </div>`)
+        });
     })
     .fail(xhr => {
         console.log(xhr)
