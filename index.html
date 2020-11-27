@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="281930259133-6prd3arhd19sonc7e2pivi7t8ifdjld8.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Music Apps</title>
@@ -59,10 +60,20 @@
             <button id="register" class="btn btn-success" onclick="registerPage()"> I havent acount</button>
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </form>
-    </div>
+        <div id="google-login">
+            <p class="text-center">easily register/login with your google account</p>
+            <div class="g-signin2 btn-center" data-onsuccess="onSignIn"></div>
+            <br> <br> <br> 
+        </div>    </div>
     
     <!-- this script is needed to track lyric -->
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+
+    <!-- assets resource -->
     <script src="./assets/index.js"></script>
+    <script src="./_assets/helpers.js"></script>
+
+    <!-- google sign in resource -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 </html>
