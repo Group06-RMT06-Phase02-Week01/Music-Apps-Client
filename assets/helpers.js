@@ -97,7 +97,7 @@ function songsByArtist(artistName, dataLength, pageNumber){
         })
 } 
 function register(){
-    const email = $("#email-regis").val
+    const email = $("#email-regis").val()
     const password = $("#password-regis").val()
         $.ajax({
             method: "POST",
@@ -142,7 +142,7 @@ function fetchMusic(){
     // $("#list-music").empty()
     $.ajax({
         method: "GET",
-        url:  `${server}/todos`,
+        url:  `${host}/todos`,
         headers: {
             access_token: localStorage.getItem("access_token")
         }
@@ -171,7 +171,7 @@ function login(){
         const password = $("#password-login").val()
         $.ajax({
             method: "POST",
-            url: "http://localhost:3000/login",
+            url: host + "/login",
             data: {
                 email,
                 password
@@ -191,7 +191,7 @@ function register(){
     const password = $("#password-regis").val()
         $.ajax({
             method: "POST",
-            url: "http://localhost:3000/register",
+            url: host + "/register",
             data: {
                 email,
                 password
@@ -204,32 +204,4 @@ function register(){
         .fail((xhr, textStatus) => {
             console.log(textStatus)
         })
-}
-function fetchMusic(){
-    // $("#list-music").empty()
-    $.ajax({
-        method: "GET",
-        url:  `${server}/todos`,
-        headers: {
-            access_token: localStorage.getItem("access_token")
-        }
-    })
-    .done(response => {
-        response.forEach(element => {
-            // console.log(element.id)  
-            $("#list-music").append(` 
-            <div class="card bg-ligth mb=10 pd=10" id="music-list">
-                <div class="card-deck m">
-                    <div class="card-body text-center">
-                        <p class="card-text">${element.title}</p>
-                        <p class="card-text">${element.description}</p>
-                        <p class="card-text text-muted"> ${element.due_date.substr(0, 10)}</p>
-                    </div>
-                </div>
-            </div>`)
-        });
-    })
-    .fail(xhr => {
-        console.log(xhr)
-    })
 }
