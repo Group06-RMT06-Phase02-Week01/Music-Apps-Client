@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Navbar-->
-    <div class="d-flex justify-content-left" id="main-page1">
+    <div class="d-flex justify-content-left">
         <nav class="navbar navbar-expand-sm bg-ligth navbar-ligth">
             <ul class="navbar-nav">
                 <li>
@@ -43,15 +43,15 @@
     <div class="container" id="login-page">
         <h2> Login </h2> 
         <form class= "was-validated" id="login-form">
-            <div class='form-group'>
+            <div class="form-group">
                 <label for="email"> Email </label>
-                <input type="email" id="email-login" class="form-control" placeholder="Enter Email" name="email" required>
+                <input type="email" id="email-login" class="form-control" placeholder="Enter Email" name="email"  required>
                 <div class="valid-feedback"> Valid </div>
                 <div class="invalid-feedback"> Please fill out this field</div>
             </div>
             <div class="form-group">
                 <label for="password"> Password</label>
-                <input type="password" id="password-login" class="form-control" placeholder="Enter password" name="password" required > 
+                <input type="password" id="password-login" class="form-control" placeholder="Enter password" name="password"  required > 
                 <div class="valid-feedback"> Valid </div>
                 <div class="invalid-feedback"> Please fill out this field</div>
             </div>
@@ -60,9 +60,41 @@
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </form>
     </div>
+    <div class="'container-jumbotron text-center'" id="list-music">
+        <div class="card-deck m">
+            <div class="card">
+              <!-- <img src="" class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Belajar Bootstrap 4</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Diposting 2 Menit Lalu</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <!-- <img src="" class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Belajar Bootstrap 4</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Diposting 2 Menit Lalu</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <!-- <img src="" class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Belajar Bootstrap 4</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Diposting 2 Menit Lalu</small></p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
     
     <!-- this script is needed to track lyric -->
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-    <script src="./assets/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/assets/index.js"></script>
 </body>
 </html>
