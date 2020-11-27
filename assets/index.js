@@ -10,6 +10,5 @@ $(document).ready(() => {
         showLoginPage()
     }
 
-    getRandomQuote()
-
+    getInsult()
 })
