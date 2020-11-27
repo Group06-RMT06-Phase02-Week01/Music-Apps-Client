@@ -1,4 +1,5 @@
 const host = 'http://localhost:3000'
+
 function onSignIn(googleUser) {
     const googleToken = googleUser.getAuthResponse().id_token;
 
@@ -99,7 +100,7 @@ function register(){
     const password = $("#password-regis").val()
         $.ajax({
             method: "POST",
-            url: "http://localhost:3000/register",
+            url: host + "/register",
             data: {
                 email,
                 password
@@ -118,7 +119,7 @@ function login(){
         const password = $("#password-login").val()
         $.ajax({
             method: "POST",
-            url: "http://localhost:3000/login",
+            url: host + "/login",
             data: {
                 email,
                 password
